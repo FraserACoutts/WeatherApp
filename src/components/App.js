@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import Search from './Search';
+import LocationList from './LocationList';
 
 class App extends React.Component {
-    state = { weather: [] };
+    state = { days: [] };
 
     onSearchSubmit = async (term) => {
         const response = await axios.get('http://api.weatherapi.com/v1/forecast.json', {
@@ -14,14 +15,14 @@ class App extends React.Component {
             },
         });
 
-        this.setState({ weather: response.data.forecast.forecastday });
+        this.setState({ days: response.data.forecast.forecastday });
     };
 
     render() {
         return (
             <div>
                 <Search onSubmit={this.onSearchSubmit} />
-                Found: {this.state.weather.length}
+                <LocationList days={this.state.days} />
             </div>
         );
     }
