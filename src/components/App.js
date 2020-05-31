@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Search from './Search';
-import LocationList from './LocationList';
-import LocationInfo from './LocationInfo';
+import CurrentTemp from './CurrentTemp';
 
 class App extends React.Component {
     state = { forecasts: [], location: [], current: [] };
@@ -16,15 +15,18 @@ class App extends React.Component {
             }
         });
 
-        this.setState({ forecasts: response.data.forecast.forecastday, location: response.data.location, current: response.data.current });
+        this.setState({
+            forecasts: response.data.forecast.forecastday,
+            location: response.data.location,
+            current: response.data.current
+        });
     };
 
     render() {
         return (
             <div>
                 <Search onSubmit={this.onSearchSubmit} />
-                <LocationInfo location={this.state.location} />
-                <LocationList forecasts={this.state.forecasts} />
+                <CurrentTemp current={this.state.current} location={this.state.location} />
             </div>
         );
     }
