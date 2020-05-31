@@ -1,19 +1,20 @@
 import React from 'react';
 
 const LocationList = (props) => {
-    console.log(props.days);
+    console.log(props.forecasts);
 
-    const days = props.days.map(({ day, date }) => {
-        return (
-            <div key={date}>
-                <h2>{date}</h2>
-                <img alt={day.condition.text} src={day.condition.icon} />
-                <h3>{day.condition.text}</h3>
-            </div>
-        );
-    });
+    // const forecast = props.forecasts.map(({ day, date }) => {
+    //     return (
+    //         <div key={date}>
+    //             <h2>{date}</h2>
+    //             <img alt={day.condition.text} src={day.condition.icon} />
+    //             <h3>{day.condition.text}</h3>
+    //         </div>
+    //     );
+    // });
 
-    return <div>{days}</div>;
+    return <div>List</div>;
+
 };
 
 export default LocationList;
