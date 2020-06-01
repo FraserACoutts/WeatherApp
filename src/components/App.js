@@ -26,7 +26,7 @@ class App extends React.Component {
         return (
             <div>
                 <Search onSubmit={this.onSearchSubmit} />
-                <CurrentTemp current={this.state.current} location={this.state.location} />
+                <CurrentTemp current={this.state.current} location={this.state.location} forecasts={this.state.forecasts} />
             </div>
         );
     }
