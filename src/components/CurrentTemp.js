@@ -1,9 +1,9 @@
 import React from 'react';
 
 const CurrentTemp = ({ current, location, forecasts, date }) => {
-    console.log(current);
-    console.log(location);
-    console.log(forecasts);
+    // console.log(current);
+    // console.log(location);
+    // console.log(forecasts);
 
     const image = forecasts.map((forecast) => {
         return (
