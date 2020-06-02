@@ -1,3 +1,21 @@
 .temp-details {
+    display: flex;
+    flex-direction: column;
     padding-top: 20rem;
+}
+
+.weather-details {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.weather-details p {
+    margin-top: 0.5rem;
+}
+
+.current-details {
+    padding-left: 4rem;
+    font-size: 0.8rem;
 }
