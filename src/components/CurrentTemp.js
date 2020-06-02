@@ -1,10 +1,7 @@
 import React from 'react';
+import './CurrentTemp.css';
 
 const CurrentTemp = ({ current, location, forecasts, date }) => {
-    // console.log(current);
-    // console.log(location);
-    // console.log(forecasts);
-
     const image = forecasts.map((forecast) => {
         return (
             <div>
@@ -15,14 +12,14 @@ const CurrentTemp = ({ current, location, forecasts, date }) => {
     });
 
     return (
-        <div>
+        <div className="temp-details">
             <div>
                 <h1>{location.name} {location.country}</h1>
                 {date}
             </div>
             <div>
                 {image[0]}
-                <p>Current Temp {current.temp_c}</p>
+                <p>{current.temp_c}</p>
             </div>
         </div>
     );

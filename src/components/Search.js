@@ -10,27 +10,25 @@ class SearchLocation extends React.Component {
         this.props.onSubmit(this.state.term);
     };
 
-    componentDidMount() {
-        window.navigator.geolocation.getCurrentPosition(
-            position => this.setState({ term: `${position.coords.latitude} ${position.coords.longitude}` }),
-        );
-
-        // const [lat, lon] = [56.772003999999995, -2.4168784999999997];
-        // const coords = `${lat} ${lon}`;
-
-        // this.setState({ term: coords });
-    };
+    // componentDidMount() {
+    //     window.navigator.geolocation.getCurrentPosition(
+    //         position => this.setState({ term: `${position.coords.latitude} ${position.coords.longitude}` }),
+    //     );
+    // };
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.onFormSubmit}>
-                    <label className="label">Location Search</label>
+            <div className="search-form">
+                <h1 className="header-title">Weather Search</h1>
+                <form className="form" onSubmit={this.onFormSubmit}>
                     <input
+                        className="input"
+                        placeholder="Enter town, city or postcode to find a location."
                         type="text"
                         value={this.state.term}
                         onChange={(e) => this.setState({ term: e.target.value })}
                     />
+                    <button>Search</button>
                 </form>
             </div>
         );

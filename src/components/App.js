@@ -3,6 +3,7 @@ import axios from 'axios';
 import moment from 'moment';
 import Search from './Search';
 import CurrentTemp from './CurrentTemp';
+import './Search.css';
 
 class App extends React.Component {
     state = { forecasts: [], location: [], current: [], date: [] };
@@ -26,9 +27,11 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <Search onSubmit={this.onSearchSubmit} />
-                <CurrentTemp current={this.state.current} location={this.state.location} forecasts={this.state.forecasts} date={this.state.date} />
+            <div className="main-content">
+                <div className="main-content-items">
+                    <Search className="search" onSubmit={this.onSearchSubmit} />
+                    <CurrentTemp className="current-temp" current={this.state.current} location={this.state.location} forecasts={this.state.forecasts} date={this.state.date} />
+                </div>
             </div>
         );
     }
