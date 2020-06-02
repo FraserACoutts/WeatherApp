@@ -1,4 +1,5 @@
 import React from 'react';
+import './Search.css';
 
 class SearchLocation extends React.Component {
     state = { term: '' };
@@ -24,7 +25,7 @@ class SearchLocation extends React.Component {
         return (
             <div>
                 <form onSubmit={this.onFormSubmit}>
-                    <label>Location Search</label>
+                    <label className="label">Location Search</label>
                     <input
                         type="text"
                         value={this.state.term}
