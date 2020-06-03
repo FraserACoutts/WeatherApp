@@ -2,9 +2,6 @@ import React from 'react';
 import './CurrentTemp.css';
 
 const CurrentTemp = ({ current, location, forecasts, date }) => {
-
-    console.log(current);
-
     const image = forecasts.map((forecast) => {
         return (
             <div>
@@ -23,9 +20,9 @@ const CurrentTemp = ({ current, location, forecasts, date }) => {
             <div className="weather-details">
                 <div>{image[0]}</div>
                 <div className="current-details">
-                    <p>{current.temp_c} Celcius</p>
-                    <p>{current.humidity} Humidity</p>
-                    <p>{current.wind_mph} Wind Mph</p>
+                    {current.temp_c && <p>{current.temp_c} Celcius</p>}
+                    {current.humidity && <p>{current.humidity} Humidity</p>}
+                    {current.wind_mph && <p>{current.wind_mph} Wind Mph</p>}
                 </div>
 
             </div>
