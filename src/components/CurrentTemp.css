@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     padding-top: 20rem;
+    width: 400px;
 }
 
 .weather-details {
     display: flex;
     padding-top: 1rem;
-    justify-content: start;
-    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .weather-details p {
@@ -16,6 +16,11 @@
 }
 
 .current-details {
-    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
     font-size: 0.8rem;
+}
+
+.current-details div {
+    text-align: left;
 }

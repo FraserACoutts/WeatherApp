@@ -32,6 +32,7 @@ class App extends React.Component {
                     <Search className="search" onSubmit={this.onSearchSubmit} />
                     <CurrentTemp className="current-temp" current={this.state.current} location={this.state.location} forecasts={this.state.forecasts} date={this.state.date} />
                 </div>
+
             </div>
         );
     }
