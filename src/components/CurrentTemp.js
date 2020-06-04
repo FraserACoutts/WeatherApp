@@ -24,13 +24,13 @@ const CurrentTemp = ({ current, location, forecasts, date }) => {
                 <div>{image[0]}</div>
                 <div className="current-details">
                     <div>
-                        {current.temp_c && <p>Temperature: {current.temp_c} <span>&deg;C</span></p>}
+                        {current.temp_c && <p>Temperature : {current.temp_c} <span>&deg;C</span></p>}
                     </div>
                     <div>
-                        {current.humidity && <p>Humidity: {current.humidity}%</p>}
+                        {current.humidity && <p>Humidity : {current.humidity}%</p>}
                     </div>
                     <div>
-                        {current.wind_mph && <p>Wind: {current.wind_mph} mph</p>}
+                        {current.wind_mph !== 0 ? current.wind_mph && <p>Wind : {current.wind_mph} mph</p> : <p>Wind : No Data</p>}
                     </div>
                 </div>
 
