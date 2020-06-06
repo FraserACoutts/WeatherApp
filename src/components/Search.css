@@ -11,6 +11,11 @@
     color: #fafafa;
 }
 
+.error-message {
+    padding-top: 10rem;
+    border-bottom: 1px solid white;
+}
+
 .main-content-items {
     display: flex;
     flex-direction: column;

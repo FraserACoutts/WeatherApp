@@ -31,7 +31,6 @@ const CurrentTemp = ({ current, location, forecasts, date }) => {
                         {current.wind_mph !== 0 ? current.wind_mph && <p>Wind : {current.wind_mph} mph</p> : <p>Wind : No Data</p>}
                     </div>
                 </div>
-
             </div>
         </div>
     );
