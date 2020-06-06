@@ -10,12 +10,6 @@ class SearchLocation extends React.Component {
         this.props.onSubmit(this.state.term);
     };
 
-    // componentDidMount() {
-    //     window.navigator.geolocation.getCurrentPosition(
-    //         position => this.setState({ term: `${position.coords.latitude} ${position.coords.longitude}` }),
-    //     );
-    // };
-
     render() {
         return (
             <div className="search-form">

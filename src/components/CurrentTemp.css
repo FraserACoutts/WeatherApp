@@ -1,13 +1,13 @@
 .temp-details {
     display: flex;
     flex-direction: column;
-    padding-top: 20rem;
+    padding-top: 30rem;
     width: 400px;
 }
 
 .weather-details {
     display: flex;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     justify-content: space-between;
 }
 
@@ -23,4 +23,8 @@
 
 .current-details div {
     text-align: left;
+}
+
+.temp-details .date {
+    font-size: 1rem;
 }
