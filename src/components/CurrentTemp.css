@@ -38,3 +38,7 @@
 .temp-details .date {
     font-size: 1rem;
 }
+
+.forecast-text {
+    text-align: center;
+}

@@ -17,7 +17,7 @@ class SearchLocation extends React.Component {
                 <form className="form" onSubmit={this.onFormSubmit}>
                     <input
                         className="input"
-                        placeholder="Enter town, city or postcode to find a location."
+                        placeholder="Enter town, city or postcode..."
                         type="text"
                         value={this.state.term}
                         onChange={(e) => this.setState({ term: e.target.value })}

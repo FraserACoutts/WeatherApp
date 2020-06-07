@@ -7,7 +7,7 @@ const CurrentTemp = ({ current, location, forecasts, date }) => {
         return (
             <div>
                 <img alt={forecast.text} key={forecast.date_epoch} src={forecast.day.condition.icon} />
-                <p>{forecast.day.condition.text}</p>
+                <p className="forecast-text">{forecast.day.condition.text}</p>
             </div>
         );
     });

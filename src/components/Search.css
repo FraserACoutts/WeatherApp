@@ -16,6 +16,12 @@
     border-bottom: 1px solid white;
 }
 
+@media only screen and (max-width: 600px) {
+    .error-message {
+        font-size: 1.2rem;
+    }
+}
+
 .main-content-items {
     display: flex;
     flex-direction: column;
@@ -65,16 +71,17 @@
 
 .input {
     padding: 10px;
+    margin-left: 1rem;
     border: none;
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
     font-size: 0.8rem;
     width: 23rem;
-    margin-left: 1rem;
     color: #212121;
 }
 
 @media only screen and (max-width: 600px) {
     .input {
         width: 15rem;
+        margin-left: 0;
     }
 }
