@@ -11,7 +11,7 @@ class App extends React.Component {
 
     onSearchSubmit = async (term) => {
         try {
-            const response = await axios.get('http://api.weatherapi.com/v1/forecast.json', {
+            const response = await axios.get('https://api.weatherapi.com/v1/forecast.json', {
                 params: {
                     key: 'cfb5e6d9acd0434f874112648202805',
                     query: term,
