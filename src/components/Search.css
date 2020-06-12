@@ -76,7 +76,11 @@
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
     font-size: 0.8rem;
     width: 23rem;
-    color: #212121;
+}
+
+input,
+textarea {
+    background-color: #fafafa;
 }
 
 @media only screen and (max-width: 600px) {
