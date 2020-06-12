@@ -88,4 +88,9 @@ textarea {
         width: 15rem;
         margin-left: 0;
     }
+
+    input[type='text'],
+    textarea {
+        background-color: #fafafa;
+    }
 }
